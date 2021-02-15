@@ -1,0 +1,544 @@
+/*   
+Theme Name: JRK Theme - CI 2018
+Description: Wordpress Template des neuen CI des Jugendrotkreuzes
+Version: 1.02
+Author: Benni Obenaus
+Author URI: http://benniobenaus.de
+*/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,hr,menu,nav,section{display:block}a,hr{padding:0}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}ins,mark{background-color:#ff9;color:#000}body{line-height:1}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;font-size:100%;vertical-align:baseline;background:0 0}ins{text-decoration:none}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{height:1px;border:0;border-top:1px solid #e0ddd6;margin:1em 0}input,select{vertical-align:middle}
+
+@font-face {
+    font-family: 'HelveticaNeueLT';
+	src: url('/wp-content/themes/jrk_theme/media/HelveticaNeueLT-Light.eot');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLT';
+    src: url('/wp-content/themes/jrk_theme/media/HelveticaNeueLT-Light.woff2') format('woff2'), url('../jrk-theme/media/HelveticaNeueLT-Light.woff') format('woff'), url('../jrk-theme/media/HelveticaNeueLT-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLT';
+    src: url('/wp-content/themes/jrk_theme/media/HelveticaNeueLT-Medium.eot');
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLT';
+    src: url('/wp-content/themes/jrk_theme/media/HelveticaNeueLT-Medium.woff2') format('woff2'), url('/wp-content/themes/jrk-theme/media/HelveticaNeueLT-Medium.woff') format('woff'), url('/wp-content/themes/jrk-theme/media/HelveticaNeueLT-Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLT';
+    src: url('/wp-content/themes/jrk_theme/media/HelveticaNeueLT-Light-Italic.eot');
+    font-weight: normal;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLT';
+    src: url('/wp-content/themes/jrk_theme/media/HelveticaNeueLT-Light-Italic.woff2') format("woff2"), url('/wp-content/themes/jrk-theme/media/HelveticaNeueLT-Light-Italic.woff') format('woff'), url('/wp-content/themes/jrk-theme/media/HelveticaNeueLT-Light-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic
+}
+
+body{
+    background-color: white;
+    color: #554f4a;
+    font-family: 'HelveticaNeueLT', sans-serif;
+    font-size: 17px;
+    line-height: 27px;
+    overflow-y: scroll;
+}
+
+*{
+	-webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+        -ms-box-sizing:border-box;
+            box-sizing:border-box;
+}
+
+ul, ol, li{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+/* Standard Design */
+
+.clear{
+	clear:both;
+}
+
+.img-responsive, .img-responsive img{
+	max-width:100%;
+	height:auto;
+}
+
+.img-max, .img-max img{
+	max-width:inherit;
+	width:100%;
+}
+
+.margin-top-xlarge{ margin-top: 40px; }
+.margin-bottom-xlarge{ margin-bottom: 20px; }
+
+.padding-topbottom-large{
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+
+.link-white a, a.link-white{
+	color:white;
+}
+
+/* Standards JRK */
+
+a{
+	color:#009099;
+    text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+.wrapper{
+	margin:0 auto;
+    max-width:1200px;
+    padding:0 20px;
+    position:relative;
+}
+
+#header .wrapper{
+	padding:0;
+}
+
+h1, h2, h3{
+	width: 100%;
+	color:#009099;
+}
+
+h1{
+	color:#009099;
+	font-size: 44px;
+	line-height: 55px;
+	margin-bottom: 18px;
+}
+
+h1 span {
+	color: #554f4a;
+	font-size: 22px;
+	margin-left: 15px;
+}
+
+h2{
+	font-size: 24px;
+	margin-top:10px;
+	margin-bottom: 14px;
+}
+
+h3{
+	font-size: 20px;
+	margin-top:8px;
+	margin-bottom: 10px;
+}
+
+h4{
+	font-weight:bold;
+	margin-top:22px;
+	margin-bottom:12px;
+}
+
+/* Header JRK */
+
+#header-fixed{
+	position:fixed;
+	top: 0;
+	width: 100%;
+    background-color: white;
+    height: 150px;
+	z-index: 99;
+}
+
+#logo{
+	top: 10px;
+	left: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    position: absolute;
+}
+
+#logo a{
+	display:inline-block;
+}
+
+#call2action{
+	position:absolute;
+	top:0;
+	right:0;
+	width:230px;
+	height:100px;
+}
+
+#menu, #social{
+	float:right;
+}
+
+#banner{
+	padding-top: 150px;
+}
+
+#minibanner{
+	padding: 50px 50px 0 175px;
+}
+
+#header-fixed.scrolled{
+	height: 50px;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}
+
+#header-fixed.scrolled #logo{
+	width: 40px;
+    top: -4px;
+    left: 0;
+}
+
+#header-fixed.scrolled #minibanner{
+	display:none;
+}
+
+.c2a-icon{
+	height:25px;
+	width:100%;
+    fill:#009099;
+}
+
+.c2a-menu{
+	cursor: pointer;
+	height: 50px;
+}
+
+.c2a-menu .sprite{
+	display: none;
+}
+
+.c2a-menu .sprite.show{
+	display: block;
+}
+
+.c2a-menu-title{
+    height:50px;
+    width:75px;
+    line-height:38px;
+    color: #009099;
+    text-align:right;
+    text-transform:uppercase;
+    display:inline-block;
+    font-size:17px;
+    font-weight:200;
+    vertical-align:top;
+    padding:8px;
+}
+
+.c2a-icon-con{
+	display:inline-block;
+}
+
+#social .c2a-icon-con{
+	float:right;
+	width:22px;
+	margin: 14px 10px 0 10px;
+}
+
+#menu .c2a-icon-con{
+	width:50px;
+	height:50px;
+	background-color:#009099;
+}
+
+#menu .c2a-icon-con svg{
+	height:100%;
+    width:100%;
+    padding:12px;
+}
+
+.c2a-menu-sub{
+	display:none;
+	position: absolute;
+	right: 0;
+	background: white;
+	max-width: 100%;
+	min-width: 310px;
+    -webkit-box-shadow: -5px 12px 20px 0 rgba(0,0,0,0.5);
+    box-shadow: -5px 12px 20px 0 rgba(0,0,0,0.5);
+    transition: 0.25s all ease-in-out;
+    z-index: 5000;
+}
+
+.c2a-menu-sub .menu-item:first-of-type{
+	border-top: 1px solid #e0ddd6;
+}
+
+.c2a-menu-sub .menu-item{
+	border-bottom: 1px solid #e0ddd6;
+}
+
+.c2a-menu-sub-con{
+	position:relative;
+	height: 44px;
+} 
+
+.c2a-menu-sub .menu-item a{
+	color: #009099;
+    display: block;
+    padding: 9px 12px;
+    position: relative;
+    height: 44px;
+    line-height: 30px;
+}
+
+.c2a-menu-sub .menu-item a:hover{
+	color: #383838;
+	text-decoration: none;
+}
+
+.c2a-menu-sub .sub-menu .menu-item a{
+	color: #383838;
+}
+
+.c2a-menu-sub .sub-menu .menu-item a:hover{
+	color: #009099;
+}
+
+.c2a-menu-sub .sub-menu .menu-item a::before{
+	content: '-';
+	padding-right: 6px;
+}
+
+.c2a-menu-sub-link, .c2a-menu-sub-icon{
+	position: absolute;
+    top: 0;
+    line-height: 44px;
+}
+
+.c2a-menu-sub-link{
+	left: 0;
+    text-align: left;
+    z-index: 100;
+}
+
+.c2a-menu-sub-icon{
+    right: 0;
+    width: 50px;
+    text-align: center;
+	cursor: pointer;
+	content: '+';
+}
+
+.c2a-menu-sub-icon::after{
+	content: '+';
+}
+
+.c2a-menu-sub-icon.open::after{
+    content: '-';
+}
+
+.c2a-menu-sub .menu-item > .sub-menu{
+	display:none;
+}
+
+.c2a-menu-sub .menu-item > .sub-menu li{
+	padding-left: 6px;
+}
+
+.suche{
+	display: none;
+}
+
+/* Page - Meta-Daten */
+
+.meta-categories {
+	margin-bottom: 12px;
+}
+
+.meta-date {
+	display: inline-block;
+	width: 33%;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #e0ddd6;
+}
+
+.meta-author {
+	margin: 10px 0 16px;
+}
+
+/* Footer JRK */
+
+#footer{
+	background: #009099;
+    color: #fff;
+	font-size: 14px;
+}
+
+#footer .c2a-menu-sub-con{
+	height: inherit;
+}
+
+#footer .c2a-menu-sub-link{
+	position: relative;
+    font-weight: 600;
+    padding: 0;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+#footer .c2a-menu-sub-icon{
+	display:none;
+}
+
+#footer .sub-menu li{
+	line-height: 22px;
+}
+
+#footer .screen-reader-text{
+	width: 100%;
+    margin-top: 10px;
+}
+
+#footer #searchform input {
+	border: none;
+	height: 32px;
+}
+
+#footer #searchform input[type="text"] {
+	padding: 0 4px;
+}
+
+/* Content */
+
+.post-container{
+	width: 100%;
+    margin-bottom: 40px;
+}
+
+.panel-grid .post-container:last-child {
+	margin-bottom: 0;
+}
+
+.post-container.row{
+	border-top: 1px solid #e0ddd6;
+}
+
+.post-container .post-image img {
+	padding-top: 12px;
+	width: 100%;
+	height: auto;
+}
+
+.post-container h1{
+	margin-bottom: 0;
+}
+
+.post-container h2{
+	display: inline-block;
+}
+
+.post-container hr{
+	width: 33%;
+	margin: 0.3em 0;
+}
+
+.post-container .entry {
+	margin-bottom: 20px;
+	white-space: normal;
+}
+
+.post-container .entry ul, 
+.textwidget ul, 
+.post-container .entry ol, 
+.textwidget ol {
+	padding-left: 30px;
+	margin: 5px 0 15px;
+}
+
+.post-container .entry ol, 
+.textwidget ol {
+	padding-left: 40px;
+}
+
+.post-container .entry li, .textwidget li {
+	margin-bottom: 5px;
+}
+
+.post-container .entry ul li, .textwidget ul li {
+	list-style: disc;
+}
+
+.post-container .entry ol li, .textwidget ol li {
+	list-style: decimal-leading-zero;
+}
+
+.post-container .meta-categories {
+    margin-bottom: 7px;
+}
+
+.page-nav {
+	width: 100%;
+    background-color: #e8e8e8;
+    padding: 5px;
+    border-top: 1px solid #009099;
+}
+
+/* Post list */
+.display-posts-listing {
+	font-family: 'HelveticaNeueLT', sans-serif;
+}
+
+@media (max-width: 780px){
+	.margin-bottom-xlarge {
+		margin-bottom: 60px;
+	}
+	.margin-top-xlarge{ 
+		margin-top: 20px; 
+	}
+	
+	h1 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	#logo{
+		top: 5px;
+	    left: 5px;
+	    width: 50px;
+	    height: 50px;
+	}
+
+	#minibanner{
+		display: none;
+	}
+
+	#header-fixed {
+	   height: 50px;
+	}
+
+	#banner {
+	    padding-top: 30px;
+	}
+}
